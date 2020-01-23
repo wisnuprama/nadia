@@ -37,7 +37,7 @@ public class MolUtils {
         plugin.setMMFF94(true);
         plugin.setOptimization(ConformerPlugin.OPTIMIZATION_STRICT);
         plugin.setTimelimit(900);
-        // run the calculatioDn
+        // run the calculation
         plugin.run();
 
         // get results
