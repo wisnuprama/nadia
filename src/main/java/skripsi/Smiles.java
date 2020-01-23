@@ -42,6 +42,10 @@ public class Smiles {
         return molecule;
     }
 
+    public void setMolecule(Molecule molecule) {
+        this.molecule = molecule;
+    }
+
     public final String getFileName(String fileFormat) {
         return String.format("%s - %s - %s [%s]", getId(), getCompoundClass(), getName(), fileFormat);
     }

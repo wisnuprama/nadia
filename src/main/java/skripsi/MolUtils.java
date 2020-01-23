@@ -2,7 +2,9 @@ package skripsi;
 
 import chemaxon.formats.MolExporter;
 import chemaxon.formats.MolImporter;
+import chemaxon.marvin.Sketch;
 import chemaxon.marvin.calculations.ConformerPlugin;
+import chemaxon.marvin.modelling.struc.ConformerEquivalenceUtils;
 import chemaxon.marvin.plugin.PluginException;
 import chemaxon.struc.Molecule;
 
@@ -21,7 +23,7 @@ public class MolUtils {
         return importer.read();
     }
 
-    public static Molecule[] optimizeMolecule(Smiles smiles) throws PluginException, IOException {
+    public static ConformerPlugin optimizeMolecule(Smiles smiles) throws PluginException, IOException {
         // create plugin
         // FIXME somehow the ConformerPlugin crash the program:
         // Process 'command '/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java'' finished with non-zero exit value 1
@@ -39,7 +41,7 @@ public class MolUtils {
         plugin.run();
 
         // get results
-        return plugin.getConformers();
+        return plugin;
     }
 
     public static void exportAsFile(Molecule molecule, String format, String filename) {
