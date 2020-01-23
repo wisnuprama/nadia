@@ -46,12 +46,9 @@ public class Main {
             ConformerPlugin conformerPlugin = MolUtils.optimizeMolecule(smiles);
             logger.info(String.format("-- ID:%s has been optimized", smiles.getId()));
 
-            // nadia wants the first picture, so for now I assume that
-            // the results of the conformer reflecting the result on the window
-            // Nadia see while she manually converting them.
-            final int TARGET_INDEX = 0;
+            // nadia wants the lowest energy conformer
             // i don't like this design because mutating the object, but fine for now
-            smiles.setMolecule(conformerPlugin.getConformer(TARGET_INDEX));
+            smiles.setMolecule(conformerPlugin.getLowestEnergyConformer());
         } catch (IOException | PluginException e) {
             logger.severe(String.format("Failed to optimize ID:%s | error: %s", smiles.getId(), e.getMessage()));
         }
