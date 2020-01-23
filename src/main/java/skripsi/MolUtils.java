@@ -25,8 +25,8 @@ public class MolUtils {
 
     public static ConformerPlugin optimizeMolecule(Smiles smiles) throws PluginException, IOException {
         // create plugin
-        // FIXME somehow the ConformerPlugin crash the program:
-        // Process 'command '/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java'' finished with non-zero exit value 1
+        // you need to run the marvin sketch GUI in other thread
+        // and you need the license to use this feature
         ConformerPlugin plugin = new ConformerPlugin();
 
         // set target molecule
