@@ -1,7 +1,7 @@
 # Nadia
 
-This project is intended to optimize the given list of chemical compounds.
-Somehow my girlfriend research has to optimize so many things (around 350 chemical compounds)
+This project is intended to optimize the given dataset of chemical compounds.
+Somehow my girlfriend research has to optimize around 350 chemical compounds
 by hand manually, by opening the program, click here and there, save it to other 
 formats (`mol2` & `pdb`). Thanks Marvin!
 
