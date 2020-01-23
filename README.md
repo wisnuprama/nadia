@@ -2,8 +2,8 @@
 
 This project is intended to optimize the given dataset of chemical compounds.
 Somehow my girlfriend research has to optimize around 350 chemical compounds
-by hand manually, by opening the program, click here and there, save it to other 
-formats (`mol2` & `pdb`). Thanks Marvin!
+and find the lowest energy conformer by hand manually, by opening the program, 
+click here and there, save it to other formats (`mol2` & `pdb`). Thanks Marvin!
 
 The library used is not free and need some license and agreement. Please see the acknowledgment.
 
